@@ -1,0 +1,40 @@
+{
+  "name": "MoeGallery",
+  "version": "1.0.0",
+  "description": "A superb gallery web app.",
+  "author": "infiniteSky",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "ava"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "ant-design-vue": "^1.1.10",
+    "desandro-matches-selector": "^2.0.2",
+    "ev-emitter": "^1.1.1",
+    "fizzy-ui-utils": "^2.0.7",
+    "get-size": "^2.0.3",
+    "jquery": "^3.4.1",
+    "masonry-layout": "^4.2.2",
+    "mdui": "^0.4.3",
+    "nuxt": "^2.0.0",
+    "outlayer": "^2.1.1",
+    "v-viewer": "^1.4.2",
+    "vue": "latest",
+    "vue-waterfall-easy": "^2.4.4"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "ava": "^2.2.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "browser-env": "^3.2.5",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^2.0.0"
+  }
+}

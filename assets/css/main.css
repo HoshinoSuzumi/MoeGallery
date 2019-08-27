@@ -1,0 +1,19 @@
+@font-face {
+  font-family: YunChuan;
+  src: url("../fonts/YunChuanTi.ttf");
+}
+
+html, body {
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: normal;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #707070;
+}
