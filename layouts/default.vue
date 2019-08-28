@@ -11,7 +11,11 @@
       <div class="mdui-toolbar mdui-color-theme">
         <nuxt-link to="/" class="mdui-typo-title">Moe Gallery</nuxt-link>
         <div class="mdui-toolbar-spacer"></div>
-        <button @click="isFullScreen ? exitFullscreen() : enterFullscreen()"
+        <button @click="foldAll" mdui-tooltip="{content: '折叠全部图集'}"
+                class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">unfold_less</i>
+        </button>
+        <button @click="isFullScreen ? exitFullscreen() : enterFullscreen()" mdui-tooltip="{content: '切换全屏浏览'}"
                 class="mdui-btn mdui-btn-icon mdui-hidden-xs-down">
           <i class="mdui-icon material-icons">{{ isFullScreen ? 'fullscreen_exit' : 'fullscreen' }}</i>
         </button>
@@ -88,7 +92,13 @@
             },
             switchPage(path) {
                 this.$router.push(path);
-            }
+            },
+            foldAll() {
+                let panels = mdui.JQ('.mdui-panel');
+                for (let i = 0; i < panels.length; i++) {
+                    (new mdui.Panel(panels[i])).closeAll();
+                }
+            },
         },
     }
 </script>

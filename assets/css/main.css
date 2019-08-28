@@ -11,7 +11,7 @@ html, body {
 
 /* Animation for pages change */
 .page-enter-active, .page-leave-active {
-  transition: all .25s
+  transition: all .3s ease;
 }
 
 .page-enter, .page-leave-to {

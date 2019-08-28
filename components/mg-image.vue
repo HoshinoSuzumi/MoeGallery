@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3">
-      <!--      <img class="mg-image" :src="src" alt="" v-lazy="src" v-lazy:loading="require('~/static/icon/loading.gif')">-->
       <img class="mg-image" alt="" v-lazy="src">
     </div>
   </div>
@@ -12,7 +11,7 @@
     import Vue from 'vue';
 
     Vue.use(VueLazyload, {
-        loading: '/_nuxt/static/icon/loading.gif'
+        loading: require('~/static/icon/loading.gif')
     });
 
     export default {
@@ -40,4 +39,9 @@
   .mg-image:hover {
     background-color: orangered;
   }
+
+  /*.mg-image[lazy=loading] {*/
+  /*  width: 50%;*/
+  /*  height: 50%;*/
+  /*}*/
 </style>

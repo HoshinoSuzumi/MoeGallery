@@ -14,7 +14,7 @@
         </blockquote>
       </div>
       <div v-viewer>
-        <mg-image v-for="(src, index) in gallery.images" :key="index" :src="require('~/static/images/' + src)"
+        <mg-image v-for="(src, index) in gallery.images" :key="index" :src="src"
                   alt=""></mg-image>
       </div>
     </mg-panel>
@@ -37,13 +37,6 @@
         layout: 'default',
         mounted() {
             mdui.mutation();
-        },
-        data() {
-            return {
-                imagesList: [
-                    '001.png', '002.png', '003.jpg', '004.png', '005.png', '006.png',
-                ]
-            }
         },
         computed: {
             galleries: function () {

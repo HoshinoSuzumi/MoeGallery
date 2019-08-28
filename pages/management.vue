@@ -11,7 +11,7 @@
         layout: 'default',
         mounted() {
             if (this.$store.state.token === null) {
-                // this.$router.push('login');
+                this.$router.push('login');
             }
         }
     }
