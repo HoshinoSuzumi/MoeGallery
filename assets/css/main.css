@@ -9,8 +9,27 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* Animation for pages change */
+.page-enter-active, .page-leave-active {
+  transition: all .25s
+}
+
+.page-enter, .page-leave-to {
+  -webkit-transform: translateY(1.25rem);
+  transform: translateY(1.25rem);
+  opacity: 0
+}
+
+.page-enter-to .page-leave {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1
+}
+
+/* Scrollbar style */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {

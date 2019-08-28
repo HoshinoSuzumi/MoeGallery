@@ -9,9 +9,10 @@
     <!--    </div>-->
     <div class="mdui-appbar mdui-appbar-fixed mg-appbar">
       <div class="mdui-toolbar mdui-color-theme">
-        <a class="mdui-typo-title">Moe Gallery</a>
+        <nuxt-link to="/" class="mdui-typo-title">Moe Gallery</nuxt-link>
         <div class="mdui-toolbar-spacer"></div>
-        <button @click="isFullScreen ? exitFullscreen() : enterFullscreen()" class="mdui-btn mdui-btn-icon">
+        <button @click="isFullScreen ? exitFullscreen() : enterFullscreen()"
+                class="mdui-btn mdui-btn-icon mdui-hidden-xs-down">
           <i class="mdui-icon material-icons">{{ isFullScreen ? 'fullscreen_exit' : 'fullscreen' }}</i>
         </button>
         <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#main-menu'}">
@@ -19,13 +20,13 @@
         </button>
         <ul class="mdui-menu" id="main-menu">
           <li class="mdui-menu-item">
-            <a href="javascript:;" class="mdui-ripple">
+            <nuxt-link to="/management" class="mdui-ripple">
               <i class="mdui-menu-item-icon mdui-icon material-icons">lock_outline</i>管理
-            </a>
+            </nuxt-link>
           </li>
           <li class="mdui-divider"></li>
           <li class="mdui-menu-item">
-            <a href="javascript:;" class="mdui-ripple">
+            <a @click="messageBox('关于 Moe Gallery', '由 RED NENO 开发的图床应用')" class="mdui-ripple">
               <i class="mdui-menu-item-icon mdui-icon material-icons">info_outline</i>关于
             </a>
           </li>
@@ -41,6 +42,8 @@
 </template>
 
 <script>
+    import mdui from 'mdui';
+
     export default {
         name: "default",
         data() {
@@ -80,6 +83,12 @@
                     document.webkitExitFullscreen();
                 }
             },
+            messageBox(title, msg) {
+                mdui.alert(msg, title);
+            },
+            switchPage(path) {
+                this.$router.push(path);
+            }
         },
     }
 </script>
