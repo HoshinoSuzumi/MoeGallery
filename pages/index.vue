@@ -71,7 +71,7 @@
     }
 </script>
 
-<style scoped>
+<style>
   .mg-gallery {
     display: flex;
     flex-wrap: wrap;

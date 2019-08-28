@@ -9,9 +9,10 @@
     <!--    </div>-->
     <div class="mdui-appbar mdui-appbar-fixed mg-appbar">
       <div class="mdui-toolbar mdui-color-theme">
-        <nuxt-link to="/" class="mdui-typo-title">Moe Gallery</nuxt-link>
+        <nuxt-link to="/" class="mdui-typo-title">Moe Gallery <sup>dev</sup></nuxt-link>
         <div class="mdui-toolbar-spacer"></div>
         <button @click="foldAll" mdui-tooltip="{content: '折叠全部图集'}"
+                v-if="$route.path === '/'"
                 class="mdui-btn mdui-btn-icon">
           <i class="mdui-icon material-icons">unfold_less</i>
         </button>
@@ -114,6 +115,11 @@
     background-color: #393939;
     color: #FFFFFF;
     box-shadow: none;
+  }
+
+  .mg-content {
+    width: 100%;
+    height: 100%;
   }
 
   .mg-no-permission {

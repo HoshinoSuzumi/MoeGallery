@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3">
+    <div class="mg-image-container mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3">
       <img class="mg-image" alt="" v-lazy="src">
     </div>
   </div>
@@ -29,19 +29,19 @@
     cursor: zoom-in;
   }
 
+  .mg-image-container {
+    height: 250px;
+    overflow: hidden;
+  }
+
   .mg-image {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    transition: all .3s ease;
+    transition: all .5s ease-in-out;
   }
 
   .mg-image:hover {
-    background-color: orangered;
+    transform: scale(1.1);
   }
-
-  /*.mg-image[lazy=loading] {*/
-  /*  width: 50%;*/
-  /*  height: 50%;*/
-  /*}*/
 </style>
