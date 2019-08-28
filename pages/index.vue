@@ -72,26 +72,6 @@
 </script>
 
 <style>
-  .mg-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .mg-image {
-    display: inline-flex;
-    cursor: zoom-in;
-    flex-grow: 1;
-    object-fit: cover;
-
-    height: 200px;
-    margin: 0;
-    transition: all .3s;
-  }
-
-  .mg-image:hover {
-    transform: scale(1.0);
-  }
 
   .mdui-typo blockquote {
     margin: 0;
