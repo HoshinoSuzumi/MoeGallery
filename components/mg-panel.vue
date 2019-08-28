@@ -37,7 +37,6 @@
   .mdui-panel-item {
     color: #FFFFFF;
     background-color: #505050 !important;
-    background-color: rgba(0, 0, 0, .3);
   }
 
   .mdui-panel-item-title,
