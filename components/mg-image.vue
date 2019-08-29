@@ -30,6 +30,10 @@
   }
 
   .mg-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
     height: 250px;
     overflow: hidden;
   }
@@ -43,5 +47,10 @@
 
   .mg-image:hover {
     transform: scale(1.1);
+  }
+
+  .mg-image[lazy=loading] {
+    width: unset !important;
+    height: unset !important;
   }
 </style>
