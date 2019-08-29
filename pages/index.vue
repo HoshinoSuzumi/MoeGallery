@@ -1,6 +1,12 @@
 <template>
   <div class="mdui-container">
 
+    <div class="mdui-fab-wrapper" id="fab" mdui-fab="{trigger: 'click'}">
+      <button @click="scrollTo(0)" class="mdui-fab mdui-ripple mdui-color-grey-900">
+        <i class="mdui-icon material-icons">keyboard_arrow_up</i>
+      </button>
+    </div>
+
     <mg-panel v-for="(gallery, k1) in galleries" :key="k1" :title="gallery.title" :count="gallery.images.length">
       <div class="mdui-typo">
         <blockquote>
@@ -37,6 +43,22 @@
         layout: 'default',
         mounted() {
             mdui.mutation();
+            let debounce = null;
+            let fabInst = new mdui.Fab('#fab');
+            fabInst.hide();
+            window.addEventListener('scroll', function () {
+                if (debounce) {
+                    clearTimeout(debounce);
+                }
+                debounce = setTimeout(function () {
+                    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    if (scrollTop >= 100) {
+                        fabInst.show();
+                    } else {
+                        fabInst.hide();
+                    }
+                }, 100);
+            });
         },
         computed: {
             galleries: function () {
@@ -63,10 +85,12 @@
                 }
                 return fmt;
             },
-
             padLeftZero(str) {
                 return ('00' + str).substr(str.length);
-            }
+            },
+            scrollTo(px) {
+                document.documentElement.scrollTop = px;
+            },
         },
     }
 </script>
