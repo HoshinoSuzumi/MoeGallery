@@ -43,3 +43,12 @@ html, body {
   border-radius: 50px;
   background-color: #707070;
 }
+
+@-webkit-keyframes elFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

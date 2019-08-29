@@ -32,6 +32,7 @@
   .mdui-panel {
     border-radius: 0;
     box-shadow: none;
+    animation: elFadeIn 1s;
   }
 
   .mdui-panel-item {

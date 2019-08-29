@@ -7,6 +7,13 @@
       </button>
     </div>
 
+    <div class="mg-loading" v-if="$store.state.galleries === null">
+      <div class="mdui-card mg-rotate-circle">
+        <div class="mdui-spinner"></div>
+      </div>
+      <p>少女祈祷中...</p>
+    </div>
+
     <mg-panel v-for="(gallery, k1) in galleries" :key="k1" :title="gallery.title" :count="gallery.images.length">
       <div class="mdui-typo">
         <blockquote>
@@ -59,6 +66,11 @@
                     }
                 }, 100);
             });
+            let self = this;
+            this.$axios.post(this.$store.state.API.getGalleries)
+                .then((response) => {
+                    self.$store.commit('updateGalleries', response.data);
+                });
         },
         computed: {
             galleries: function () {
@@ -96,6 +108,28 @@
 </script>
 
 <style>
+  .mg-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 250px;
+  }
+
+  .mg-loading p {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .mg-rotate-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
 
   .mdui-typo blockquote {
     margin: 0;
