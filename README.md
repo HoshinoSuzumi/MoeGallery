@@ -28,4 +28,4 @@ Moe Gallery 是一个轻量级的个人相册，注重于图片的展示。你�
 
 _开发阶段截图不代表最终效果_
 
-![snapshot](https://github.com/boxlab/MoeGallery/raw/master/doc/snapshots/moegallery.png)
+![snapshot](https://github.com/boxlab/MoeGallery/raw/master/doc/snapshots/moe-gallery.png)
