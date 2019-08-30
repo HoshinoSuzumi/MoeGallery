@@ -8,6 +8,7 @@
     </div>
 
     <div class="mg-loading" v-if="$store.state.galleries === null">
+      <!--    <div class="mg-loading" v-if="loading">-->
       <div class="mdui-card mg-rotate-circle">
         <div class="mdui-spinner"></div>
       </div>
@@ -48,6 +49,11 @@
         name: "index",
         components: {MgPanel, MgImage},
         layout: 'default',
+        data() {
+            return {
+                // loading: false,
+            }
+        },
         mounted() {
             mdui.mutation();
             let debounce = null;
@@ -67,10 +73,18 @@
                 }, 100);
             });
             let self = this;
-            this.$axios.post(this.$store.state.API.getGalleries)
-                .then((response) => {
-                    self.$store.commit('updateGalleries', response.data);
-                });
+            // self.$axios.onRequest(() => {
+            //     this.loading = true;
+            // });
+            // self.$axios.onResponse(() => {
+            //     this.loading = false;
+            // });
+            if (!this.$store.state.galleries) {
+                this.$axios.post(this.$store.state.API.getGalleries)
+                    .then((response) => {
+                        self.$store.commit('updateGalleries', response.data);
+                    });
+            }
         },
         computed: {
             galleries: function () {
