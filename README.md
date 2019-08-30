@@ -10,7 +10,7 @@
     <a href="https://nuxtjs.org/">
         <img src="https://img.shields.io/badge/nuxt.js-v5.x-green.svg" alt="Nuxt.js 5">
     </a>
-    <a href="">
+    <a href="https://github.com/boxlab/MoeGallery">
         <img src="https://img.shields.io/badge/%F0%9F%9A%80-open--in--browser-e10079" alt="Demo">
     </a>
 </p>
