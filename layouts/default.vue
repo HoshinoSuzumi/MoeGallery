@@ -1,15 +1,10 @@
 <template>
   <div>
-    <!--    <div class="mg-no-permission">-->
-    <!--      <h1>-->
-    <!--        <i style="font-size: 5em;" class="mdui-icon material-icons">lock</i>-->
-    <!--        <br/>-->
-    <!--        全屏幕覆盖提示-->
-    <!--      </h1>-->
-    <!--    </div>-->
     <div class="mdui-appbar mdui-appbar-fixed mg-appbar">
       <div class="mdui-toolbar mdui-color-theme">
-        <nuxt-link to="/" class="mdui-typo-title">Moe Gallery <sup>dev</sup></nuxt-link>
+        <nuxt-link to="/" class="mdui-typo-title">
+          {{ $store.state.siteInfo.title || 'Moe Gallery' }} <sup>dev</sup>
+        </nuxt-link>
         <div class="mdui-toolbar-spacer"></div>
         <button @click="foldAll" mdui-tooltip="{content: '折叠全部图集'}"
                 v-if="$route.path === '/'"
@@ -120,18 +115,6 @@
   .mg-content {
     width: 100%;
     height: 100%;
-  }
-
-  .mg-no-permission {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .3);
   }
 
   .mg-no-permission h1 {

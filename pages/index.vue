@@ -49,6 +49,7 @@
         name: "index",
         components: {MgPanel, MgImage},
         layout: 'default',
+        middleware: ['userAuth'],
         data() {
             return {
                 // loading: false,

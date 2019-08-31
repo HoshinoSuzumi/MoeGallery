@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>233</div>
+    <div>management</div>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
     export default {
         name: "management",
         layout: 'default',
-        middleware: 'userAuth',
+        middleware: ['userAuth'],
     }
 </script>
 
