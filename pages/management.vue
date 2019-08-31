@@ -9,11 +9,7 @@
     export default {
         name: "management",
         layout: 'default',
-        beforeCreate() {
-            if (this.$store.state.token === null) {
-                this.$router.push('login');
-            }
-        },
+        middleware: 'userAuth',
     }
 </script>
 
