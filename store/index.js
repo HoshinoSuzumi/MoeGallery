@@ -1,4 +1,6 @@
-const API_BASE = 'https://easy-mock.com/mock/5d67c9f2ab43cb405ed2a279';
+import '~/static/config/config.js'
+
+const API_BASE = window.MGConfig.API_HOST;
 
 export const state = () => ({
   API: {
