@@ -27,7 +27,7 @@
           </p>
         </blockquote>
       </div>
-      <div v-viewer>
+      <div>
         <mg-image v-for="(src, index) in gallery.images" :key="index" :src="src"
                   alt=""></mg-image>
       </div>
@@ -43,7 +43,24 @@
     import MgImage from "../components/mg-image";
     import MgPanel from "../components/mg-panel";
 
-    Vue.use(Viewer);
+    Vue.use(Viewer, {
+        defaultOptions: {
+            toolbar: {
+                zoomIn: true,
+                zoomOut: true,
+                oneToOne: true,
+                reset: true,
+                prev: false,
+                play: false,
+                next: false,
+                rotateLeft: true,
+                rotateRight: true,
+                flipHorizontal: true,
+                flipVertical: true,
+            },
+            navbar: false,
+        },
+    });
 
     export default {
         name: "index",

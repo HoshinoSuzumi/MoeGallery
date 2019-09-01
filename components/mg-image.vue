@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mg-image-container mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3">
+    <div class="mg-image-container mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3" v-viewer>
       <img class="mg-image" alt="" v-lazy="src">
     </div>
   </div>
@@ -11,7 +11,9 @@
     import Vue from 'vue';
 
     Vue.use(VueLazyload, {
-        loading: require('~/static/icon/loading.gif')
+        loading: require('~/static/icon/loading.svg'),
+        error: require('~/static/icon/error.png'),
+        attempt: 1,
     });
 
     export default {
@@ -59,7 +61,8 @@
     transform: scale(1.1);
   }
 
-  .mg-image[lazy=loading] {
+  .mg-image[lazy=loading],
+  .mg-image[lazy=error] {
     animation: unset;
     width: unset !important;
     height: unset !important;
