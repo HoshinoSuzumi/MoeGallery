@@ -21,6 +21,15 @@
 </script>
 
 <style scoped>
+  @-webkit-keyframes imgFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .mdui-col-xs-12,
   .mdui-col-sm-6,
   .mdui-col-md-3 {
@@ -42,6 +51,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: imgFadeIn 1s;
     transition: all .5s ease-in-out;
   }
 
@@ -50,6 +60,7 @@
   }
 
   .mg-image[lazy=loading] {
+    animation: unset;
     width: unset !important;
     height: unset !important;
   }
