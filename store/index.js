@@ -6,8 +6,8 @@ export const state = () => ({
   API: {
     BASE: API_BASE,
     getGalleries: API_BASE + '/getGalleries',
-    login: API_BASE + '',
-    logout: API_BASE + '',
+    login: API_BASE + '/login',
+    logout: API_BASE + '/logout',
   },
   needAuthList: [
     '/management',
