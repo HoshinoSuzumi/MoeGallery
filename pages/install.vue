@@ -25,6 +25,14 @@
                v-model="installInfo.connection.db_pwd"/>
       </label>
 
+      <h1 class="subtitle">🛠 管理账号</h1>
+      <label>
+        <input class="mg-input" type="text" placeholder="管理员账号" spellcheck="false" v-model="installInfo.admin.account"/>
+      </label>
+      <label>
+        <input class="mg-input" type="password" placeholder="管理员密码" spellcheck="false" v-model="installInfo.admin.pwd"/>
+      </label>
+
       <button class="mg-btn mdui-m-t-3">现在安装</button>
 
     </div>
@@ -40,6 +48,10 @@
                 installInfo: {
                     site: {
                         title: ''
+                    },
+                    admin: {
+                        account: '',
+                        pwd: '',
                     },
                     connection: {
                         db_host: '',
