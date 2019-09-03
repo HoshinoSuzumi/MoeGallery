@@ -134,6 +134,7 @@
             },
             scrollTo(px) {
                 document.documentElement.scrollTop = px;
+                document.body.scrollTop = px;
             },
         },
     }
