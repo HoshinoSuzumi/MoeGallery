@@ -1,6 +1,6 @@
 ﻿<template>
   <div>
-    <div class="mg-install">
+    <div class="mg-install mdui-m-t-2">
       <h1>👋 欢迎使用 MoeGallery</h1>
       <p>请填写以下信息，完成 MoeGallery 的安装</p>
 
