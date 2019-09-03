@@ -89,3 +89,24 @@ html, body {
   margin-bottom: 0;
   border-radius: 10px 10px 0 0;
 }
+
+.mg-btn {
+  color: #FFFFFF;
+  min-width: 350px;
+  min-height: 50px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: unset;
+  border: unset;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  margin: 5px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  letter-spacing: .5em;
+}
+
+.mg-btn:hover,
+.mg-btn:focus {
+  background-color: rgba(0, 0, 0, .75);
+}

@@ -3,7 +3,8 @@
     <div class="mg-install">
       <h1>👋 欢迎使用 MoeGallery</h1>
       <p>请填写以下信息，完成 MoeGallery 的安装</p>
-      <hr/>
+
+      <div class="mdui-m-a-1"></div>
 
       <h1 class="subtitle">🌏 站点信息</h1>
       <label>
@@ -20,9 +21,11 @@
                v-model="installInfo.connection.db_name"/>
       </label>
       <label>
-        <input class="mg-input" type="text" placeholder="数据库密码" spellcheck="false"
+        <input class="mg-input" type="password" placeholder="数据库密码" spellcheck="false"
                v-model="installInfo.connection.db_pwd"/>
       </label>
+
+      <button class="mg-btn mdui-m-t-3">现在安装</button>
 
     </div>
   </div>
