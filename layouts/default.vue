@@ -30,6 +30,11 @@
               <i class="mdui-menu-item-icon mdui-icon material-icons">info_outline</i>关于
             </a>
           </li>
+          <li class="mdui-menu-item">
+            <nuxt-link to="/install" class="mdui-ripple">
+              <i class="mdui-menu-item-icon mdui-icon material-icons"></i>安装(测试)
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
