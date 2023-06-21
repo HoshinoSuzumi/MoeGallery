@@ -22,7 +22,7 @@
     "jquery": "^3.4.1",
     "masonry-layout": "^4.2.2",
     "mdui": "^0.4.3",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "outlayer": "^2.1.1",
     "v-viewer": "^1.4.2",
     "vue": "latest",
